@@ -1,6 +1,6 @@
 ﻿namespace WordsMatching
 {
-    partial class MatchForm
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -35,17 +35,14 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label_rlt = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxWildcard = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(367, 89);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button1.Location = new System.Drawing.Point(275, 56);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(129, 24);
+            this.button1.Size = new System.Drawing.Size(97, 21);
             this.button1.TabIndex = 1;
             this.button1.Text = "Match It";
             this.button1.UseVisualStyleBackColor = true;
@@ -54,19 +51,17 @@
             // textBox1
             // 
             this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.textBox1.Location = new System.Drawing.Point(33, 57);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBox1.Location = new System.Drawing.Point(25, 29);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(303, 22);
+            this.textBox1.Size = new System.Drawing.Size(228, 21);
             this.textBox1.TabIndex = 0;
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(35, 94);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.checkBox1.Location = new System.Drawing.Point(26, 61);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(100, 18);
+            this.checkBox1.Size = new System.Drawing.Size(84, 16);
             this.checkBox1.TabIndex = 4;
             this.checkBox1.Text = "SpecLength";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -98,21 +93,19 @@
             "18",
             "19",
             "20"});
-            this.comboBox1.Location = new System.Drawing.Point(156, 92);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBox1.Location = new System.Drawing.Point(117, 59);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(180, 22);
+            this.comboBox1.Size = new System.Drawing.Size(136, 20);
             this.comboBox1.TabIndex = 5;
             // 
             // listBox1
             // 
             this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 14;
+            this.listBox1.ItemHeight = 12;
             this.listBox1.Location = new System.Drawing.Point(0, 0);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(457, 326);
+            this.listBox1.Size = new System.Drawing.Size(343, 220);
             this.listBox1.TabIndex = 2;
             // 
             // panel1
@@ -121,60 +114,36 @@
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.listBox1);
-            this.panel1.Location = new System.Drawing.Point(33, 159);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel1.Location = new System.Drawing.Point(25, 117);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(457, 332);
+            this.panel1.Size = new System.Drawing.Size(343, 229);
             this.panel1.TabIndex = 3;
             // 
             // label_rlt
             // 
             this.label_rlt.AutoSize = true;
-            this.label_rlt.Location = new System.Drawing.Point(32, 129);
-            this.label_rlt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_rlt.Location = new System.Drawing.Point(24, 91);
             this.label_rlt.Name = "label_rlt";
-            this.label_rlt.Size = new System.Drawing.Size(0, 14);
+            this.label_rlt.Size = new System.Drawing.Size(0, 12);
             this.label_rlt.TabIndex = 6;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(37, 15);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 14);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Define wildcard % as :";
-            // 
-            // textBoxWildcard
-            // 
-            this.textBoxWildcard.Location = new System.Drawing.Point(203, 13);
-            this.textBoxWildcard.Name = "textBoxWildcard";
-            this.textBoxWildcard.Size = new System.Drawing.Size(133, 22);
-            this.textBoxWildcard.TabIndex = 8;
-            // 
-            // MatchForm
+            // Form1
             // 
             this.AcceptButton = this.button1;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(512, 495);
-            this.Controls.Add(this.textBoxWildcard);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(384, 349);
             this.Controls.Add(this.label_rlt);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
-            this.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(528, 577);
+            this.MaximumSize = new System.Drawing.Size(400, 500);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(528, 227);
-            this.Name = "MatchForm";
+            this.MinimumSize = new System.Drawing.Size(400, 200);
+            this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Words Matching";
             this.panel1.ResumeLayout(false);
@@ -192,8 +161,6 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label_rlt;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxWildcard;
     }
 }
 

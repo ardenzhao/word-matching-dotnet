@@ -9,10 +9,10 @@ using System.Windows.Forms;
 
 namespace WordsMatching
 {
-    public partial class MatchForm : Form
+    public partial class Form1 : Form
     {
         WordMatch _wm = null;
-        public MatchForm()
+        public Form1()
         {
             InitializeComponent();
             _wm = new WordMatch();
@@ -23,20 +23,14 @@ namespace WordsMatching
         {
             if (textBox1.Text.Length <= 0)
             {
-                MessageBox.Show(@"Please entry a match condition. *,? and % as wildcard.");
-                return;
-            }
-
-            if (textBoxWildcard.Text.ToCharArray().Any(c => !char.IsLetter(c)))
-            {
-                MessageBox.Show(@"Please entry letters in wildcard definition.");
+                MessageBox.Show(@"Please entry a match condition. * and ? as wildcard.");
                 return;
             }
 
             listBox1.Items.Clear();
 
             string patten = textBox1.Text;
-            List<string> rltList = _wm.Match(patten, checkBox1.Checked ? int.Parse(comboBox1.Text) : 0,textBoxWildcard.Text);
+            List<string> rltList = _wm.Match(patten, checkBox1.Checked ? int.Parse(comboBox1.Text) : 0);
             listBox1.Items.AddRange(rltList.ToArray());
             if (rltList.Count <= 0)
                 label_rlt.Text = @"no words matched";

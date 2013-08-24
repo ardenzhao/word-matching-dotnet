@@ -15,7 +15,7 @@ namespace WordsMatching
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MatchForm());
+            Application.Run(new Form1());
         }
     }
 }

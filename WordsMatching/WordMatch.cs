@@ -11,12 +11,9 @@ namespace WordsMatching
 {
     class WordMatch
     {
-        #region Fields
         private Dictionary<int, List<string>> _lengthDict;
         private Dictionary<char, List<string>> _headerDict;
-        #endregion
-
-        #region Property
+        
         public Dictionary<int, List<string>> LengthDict
         {
             get{
@@ -53,13 +50,7 @@ namespace WordsMatching
             get;
             set;
         }
-        #endregion
 
-        #region Public Members
-        
-        /// <summary>
-        /// read dictionary.
-        /// </summary>
         public void Init()
         {
             LengthDict.Clear();
@@ -135,10 +126,10 @@ namespace WordsMatching
         /// <param name="length"></param>
         /// <param name="stuff"></param>
         /// <returns></returns>
-        public List<string> Match(string patten, int length, string selectedLetters)
+        public List<string> Match(string patten, int length/*, string stuff*/)
         {
 
-            string regStr =ParsePatten(patten, selectedLetters);
+            string regStr =ParsePatten(patten);
 
             Regex regex = new Regex(regStr);
             List<string> mList = new List<string>();
@@ -182,18 +173,8 @@ namespace WordsMatching
             return mList;
         }
 
-        #endregion
-
-        #region Private Members
-        /// <summary>
-        ///convert '?' and '*' to regular expression.
-        ///#2012-06-12, Arden#  
-        ///     add a new wildcard '%' to replace a collection of letters.
-        ///     [abddf] => %
-        /// </summary>
-        /// <param name="patten"></param>
-        /// <returns></returns>
-        private string ParsePatten(string patten, string selectedLetters)
+        // convert '?' and '*' to regular expression.
+        private string ParsePatten(string patten)
         {
             string regularExString;
             if (patten != null && patten.Length > 0 )//&& char.IsLetter(patten[0]))
@@ -202,10 +183,6 @@ namespace WordsMatching
                 patten += "$";
 
             patten = patten.Replace("?", "[a-zA-Z]");
-            
-            if (!string.IsNullOrEmpty(selectedLetters))
-                patten = patten.Replace("%", "[" + selectedLetters + "]");
-
             regularExString = patten.Replace("*", "[a-zA-Z]*");
             
             return regularExString;
@@ -216,7 +193,17 @@ namespace WordsMatching
             
             return true;
         }
-
-        #endregion
     }
+
+    //public static class StuffCompare{
+    //    public static bool compareStuff(this string s, string stuff)
+    //    {
+    //        char[] arr = s.ToCharArray();
+    //        char[] arr_stuff = stuff.ToCharArray();
+
+    //        Array.Sort(arr);
+            
+    //        return true;
+    //    }
+    //}
 }
